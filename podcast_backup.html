@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sattvic Podcast | Sattvic Books</title>
+    <meta name="description" content="Listen to The Sattvic Podcast — conversations on spirituality, mindful living, conscious food, healing, and ancient wisdom for modern life.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#C5A059">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sattvicbooks.com/podcast.html">
+
+    <!-- Favicon & Mobile Touch Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/sattvic-books-logo.png">
+    <link rel="apple-touch-icon" href="assets/sattvic-books-logo.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sattvic Books">
+    <meta property="og:url" content="https://sattvicbooks.com/podcast.html">
+    <meta property="og:title" content="The Sattvic Podcast | Sattvic Books">
+    <meta property="og:description" content="Conversations on spirituality, mindful living, conscious food, healing, and ancient wisdom for modern life.">
+    <meta property="og:image" content="https://sattvicbooks.com/assets/podcast-cover.jpg">
+    <meta property="og:image:alt" content="The Sattvic Podcast Official Artwork">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SattvicBooks">
+    <meta name="twitter:title" content="The Sattvic Podcast | Sattvic Books">
+    <meta name="twitter:description" content="Conversations on spirituality, conscious nutrition, mindfulness, and ancient Vedic wisdom for modern life.">
+    <meta name="twitter:image" content="https://sattvicbooks.com/assets/podcast-cover.jpg">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://sattvicbooks.com/podcast.html#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://sattvicbooks.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Podcast",
+                        "item": "https://sattvicbooks.com/podcast.html"
+                    }
+                ]
+            },
+            {
+                "@type": "PodcastSeries",
+                "@id": "https://sattvicbooks.com/podcast.html#series",
+                "name": "The Sattvic Podcast",
+                "description": "Conversations on spirituality, mindful living, conscious food, inner healing, and ancient wisdom brought to life for modern seekers.",
+                "url": "https://sattvicbooks.com/podcast.html",
+                "image": "https://sattvicbooks.com/assets/podcast-cover.jpg",
+                "author": {
+                    "@type": "Organization",
+                    "name": "Sattvic Books"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* -- Podcast Page Specific -- */
+
+        /* Page wrapper &mdash; light cream background */
+
+        .podcast-page-wrap {
+
+            background-color: #F6F4EE;
+
+            min-height: 100vh;
+
+        }
+
+        /* -- Top Banner / Hero -- */
+
+        .pod-hero {
+
+            background: linear-gradient(135deg, var(--clr-primary) 0%, #4A3319 60%, #382413 100%);
+
+            padding: 120px 0 60px;
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+        .pod-hero::before {
+
+            content: '';
+
+            position: absolute; inset: 0;
+
+            background: radial-gradient(ellipse at 30% 60%, rgba(197,160,89,.18) 0%, transparent 55%),
+
+                        radial-gradient(ellipse at 75% 30%, rgba(197,160,89,.10) 0%, transparent 50%);
+
+            pointer-events: none;
+
+        }
+
+        .pod-hero-inner { position: relative; z-index: 1; }
+
+        .pod-hero-badge {
+
+            display: inline-flex; align-items: center; gap: .5rem;
+
+            background: rgba(197,160,89,.15);
+
+            border: 1px solid rgba(197,160,89,.35);
+
+            color: var(--clr-gold);
+
+            font-size: .82rem; font-weight: 600;
+
+            padding: .35rem 1.1rem; border-radius: 30px;
+
+            letter-spacing: 1px; margin-bottom: 1rem;
+
+            animation: pod-pulse 2.5s ease-in-out infinite;
+
+        }
+
+        @keyframes pod-pulse {
+
+            0%,100%{box-shadow:0 0 0 0 rgba(197,160,89,.3)}
+
+            50%{box-shadow:0 0 0 8px rgba(197,160,89,0)}
+
+        }
+
+        .pod-hero h1 { color:#fff; font-size:3rem; margin-bottom:.7rem; }
+
+        .pod-hero .pod-hero-sub {
+
+            color: rgba(255,255,255,.75);
+
+            font-size: 1.05rem;
+
+            max-width: 600px; margin: 0 auto 2rem;
+
+        }
+
+        /* Platform pills */
+
+        .pod-platforms {
+
+            display: flex; justify-content: center;
+
+            flex-wrap: wrap; gap: .8rem;
+
+        }
+
+        .pod-plat-btn {
+
+            display: inline-flex; align-items: center; gap: .45rem;
+
+            padding: .6rem 1.3rem; border-radius: 50px;
+
+            background: rgba(255,255,255,.1);
+
+            border: 1px solid rgba(255,255,255,.2);
+
+            color: #fff; font-size: .88rem; font-weight: 500;
+
+            transition: var(--transition);
+
+        }
+
+        .pod-plat-btn:hover {
+
+            background: rgba(255,255,255,.2);
+
+            color: var(--clr-gold);
+
+            border-color: var(--clr-gold);
+
+            transform: translateY(-2px);
+
+        }
+
+        /* -- YouTube Embed Section -- */
+
+        .pod-yt-section {
+
+            background: #F6F4EE;
+
+            padding: 5rem 0;
+
+        }
+
+        .pod-yt-wrap {
+
+            max-width: 860px; margin: 0 auto;
+
+        }
+
+        .pod-yt-label {
+
+            display: block;
+
+            font-size: .78rem; font-weight: 700;
+
+            text-transform: uppercase; letter-spacing: 2px;
+
+            color: var(--clr-gold); margin-bottom: .5rem;
+
+            text-align: center;
+
+        }
+
+        .pod-yt-title {
+
+            text-align: center;
+
+            font-size: 1.5rem; color: var(--clr-primary);
+
+            margin-bottom: 1.5rem;
+
+        }
+
+        .pod-yt-embed {
+
+            position: relative;
+
+            padding-bottom: 56.25%; height: 0;
+
+            border-radius: 16px; overflow: hidden;
+
+            box-shadow: 0 20px 60px rgba(44, 30, 20,.18);
+
+        }
+
+        .pod-yt-embed iframe {
+
+            position: absolute; top: 0; left: 0;
+
+            width: 100%; height: 100%; border: 0;
+
+        }
+
+        /* -- Episodes Header Bar -- */
+
+        .pod-ep-header {
+
+            background: #fff;
+
+            border-top: 3px solid var(--clr-gold);
+
+            border-bottom: 1px solid rgba(44, 30, 20,.08);
+
+            padding: 1.2rem 0;
+
+        }
+
+        .pod-ep-header-inner {
+
+            display: flex; align-items: center;
+
+            justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+
+        }
+
+        .pod-ep-header h2 {
+
+            font-size: 1.5rem; color: var(--clr-primary); margin: 0;
+
+        }
+
+        /* Filter tabs */
+
+        .pod-filter-tabs {
+
+            display: flex; gap: .5rem; flex-wrap: wrap;
+
+        }
+
+        .pod-filter-btn {
+
+            padding: .5rem 1.2rem;
+
+            border-radius: 4px;
+
+            border: 1.5px solid rgba(44, 30, 20,.2);
+
+            background: transparent;
+
+            color: var(--clr-text-light);
+
+            font-family: var(--font-body); font-size: .85rem;
+
+            font-weight: 500; cursor: pointer;
+
+            transition: var(--transition);
+
+        }
+
+        .pod-filter-btn:hover { border-color: var(--clr-primary); color: var(--clr-primary); }
+
+        .pod-filter-btn.active {
+
+            background: var(--clr-primary); color: #fff;
+
+            border-color: var(--clr-primary);
+
+        }
+
+        /* -- Episodes Grid &mdash; 3-column -- */
+
+        .pod-grid-section {
+
+            background: #F6F4EE;
+
+            padding: 5rem 0;
+
+        }
+
+        .pod-episodes-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 2.5rem 2rem;
+
+        }
+
+        /* Episode card &mdash; image top, text below */
+
+        .pod-ep-card {
+
+            display: flex; flex-direction: column;
+
+            background: transparent;
+
+            transition: var(--transition);
+
+        }
+
+        .pod-ep-card .ep-img-wrap {
+
+            position: relative;
+
+            border-radius: 8px; overflow: hidden;
+
+            aspect-ratio: 3 / 2;
+
+            box-shadow: 0 8px 28px rgba(44, 30, 20,.12);
+
+            margin-bottom: 1.2rem;
+
+            transition: box-shadow .3s ease;
+
+        }
+
+        .pod-ep-card:hover .ep-img-wrap {
+
+            box-shadow: 0 16px 48px rgba(44, 30, 20,.22);
+
+        }
+
+        .pod-ep-card .ep-img-wrap img {
+
+            width: 100%; height: 100%;
+
+            object-fit: cover;
+
+            transition: transform .5s ease;
+
+            display: block;
+
+        }
+
+        .pod-ep-card:hover .ep-img-wrap img { transform: scale(1.04); }
+
+        /* Play overlay on image hover */
+
+        .ep-img-overlay {
+
+            position: absolute; inset: 0;
+
+            background: rgba(44, 30, 20,.45);
+
+            display: flex; align-items: center; justify-content: center;
+
+            opacity: 0; transition: opacity .3s;
+
+        }
+
+        .ep-img-overlay i {
+
+            font-size: 3.5rem; color: #fff;
+
+            filter: drop-shadow(0 2px 8px rgba(0,0,0,.5));
+
+        }
+
+        .pod-ep-card:hover .ep-img-overlay { opacity: 1; }
+
+        .pod-ep-card .ep-ep-label {
+
+            font-size: .75rem; font-weight: 700;
+
+            text-transform: uppercase; letter-spacing: 1.5px;
+
+            color: var(--clr-gold); margin-bottom: .3rem;
+
+        }
+
+        .pod-ep-card h3 {
+
+            font-family: var(--font-heading);
+
+            font-size: 1.15rem; font-weight: 700;
+
+            color: var(--clr-primary);
+
+            margin-bottom: .5rem; line-height: 1.35;
+
+        }
+
+        .pod-ep-card .ep-desc {
+
+            font-size: .9rem; color: var(--clr-text-light);
+
+            line-height: 1.65; margin-bottom: 1.2rem; flex-grow: 1;
+
+        }
+
+        .pod-ep-card .ep-meta {
+
+            font-size: .8rem; color: var(--clr-text-light);
+
+            display: flex; align-items: center; gap: 1rem;
+
+            margin-bottom: 1rem;
+
+        }
+
+        .pod-ep-card .ep-meta span {
+
+            display: flex; align-items: center; gap: .35rem;
+
+        }
+
+        .pod-ep-card .ep-meta i { color: var(--clr-gold); }
+
+        /* LISTEN NOW button &mdash; gold filled */
+
+        .btn-listen {
+
+            display: inline-flex; align-items: center; gap: .5rem;
+
+            padding: .75rem 2rem;
+
+            background: var(--clr-gold);
+
+            color: var(--clr-primary);
+
+            font-family: var(--font-body);
+
+            font-size: .85rem; font-weight: 700;
+
+            text-transform: uppercase; letter-spacing: 1.5px;
+
+            border: 2px solid var(--clr-gold);
+
+            border-radius: 4px; cursor: pointer;
+
+            transition: var(--transition);
+
+            align-self: flex-start;
+
+        }
+
+        .btn-listen:hover {
+
+            background: transparent;
+
+            color: var(--clr-gold);
+
+            transform: translateY(-2px);
+
+        }
+
+        /* -- Subscribe CTA (Luxury Contrast Box) -- */
+
+        .pod-subscribe-bar {
+
+            background: #EDF4F0;
+
+            padding: 5rem 0;
+
+            border-top: 1px solid rgba(197, 160, 89, 0.2);
+
+            border-bottom: 1px solid rgba(44, 30, 20, 0.08);
+
+        }
+
+        .pod-subscribe-box {
+
+            background: linear-gradient(135deg, #FFFFFF 0%, #FAF8F3 100%);
+
+            border-radius: 20px;
+
+            padding: 3.5rem;
+
+            border: 1.5px solid rgba(197, 160, 89, 0.35);
+
+            box-shadow: 0 12px 35px rgba(44, 30, 20, 0.06);
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+        .pod-subscribe-box::before {
+
+            content: '';
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            right: 0;
+
+            height: 4px;
+
+            background: linear-gradient(90deg, var(--clr-primary), var(--clr-gold), var(--clr-primary));
+
+        }
+
+        .pod-subscribe-inner {
+
+            display: grid;
+
+            grid-template-columns: 1.15fr 1fr;
+
+            gap: 3rem;
+
+            align-items: center;
+
+        }
+
+        .pod-subscribe-inner h2 {
+
+            color: var(--clr-primary);
+
+            font-family: 'Playfair Display', Georgia, serif;
+
+            font-size: 2.2rem;
+
+            margin-bottom: .6rem;
+
+            line-height: 1.25;
+
+        }
+
+        .pod-subscribe-inner p {
+
+            color: var(--clr-text-light);
+
+            font-size: 0.98rem;
+
+            line-height: 1.6;
+
+            margin-bottom: 0;
+
+        }
+
+        .pod-sub-form {
+
+            display: flex;
+
+            gap: .8rem;
+
+            flex-wrap: wrap;
+
+        }
+
+        .pod-sub-form input {
+
+            flex-grow: 1;
+
+            min-width: 220px;
+
+            padding: .85rem 1.4rem;
+
+            border-radius: 30px;
+
+            border: 1.5px solid rgba(44, 30, 20, 0.2);
+
+            background: #FFFFFF;
+
+            color: var(--clr-text);
+
+            font-size: .95rem;
+
+            font-family: var(--font-body);
+
+            outline: none;
+
+            transition: var(--transition);
+
+        }
+
+        .pod-sub-form input::placeholder {
+
+            color: rgba(74, 92, 85, 0.6);
+
+        }
+
+        .pod-sub-form input:focus {
+
+            border-color: var(--clr-gold);
+
+            box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
+
+        }
+
+        .pod-sub-form .btn-subscribe {
+
+            padding: .85rem 1.8rem !important;
+
+            background: var(--clr-primary) !important;
+
+            color: #FFFFFF !important;
+
+            border: 2px solid var(--clr-primary) !important;
+
+            border-radius: 30px !important;
+
+            font-weight: 700 !important;
+
+            font-size: .92rem !important;
+
+            cursor: pointer !important;
+
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+
+            font-family: var(--font-body) !important;
+
+            display: inline-flex !important;
+
+            align-items: center !important;
+
+            gap: 0.5rem !important;
+
+            white-space: nowrap !important;
+
+            box-shadow: 0 4px 14px rgba(44, 30, 20, 0.2) !important;
+
+        }
+
+        .pod-sub-form .btn-subscribe:hover {
+
+            background: var(--clr-gold) !important;
+
+            border-color: var(--clr-gold) !important;
+
+            color: var(--clr-primary) !important;
+
+            transform: translateY(-2px) !important;
+
+            box-shadow: 0 6px 20px rgba(197, 160, 89, 0.35) !important;
+
+        }
+
+        .pod-sub-platforms {
+
+            margin-top: 1.2rem;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: .8rem;
+
+            flex-wrap: wrap;
+
+            font-size: .85rem;
+
+            color: var(--clr-text-light);
+
+        }
+
+        .pod-sub-platforms .platform-chip {
+
+            background: #FFFFFF;
+
+            border: 1px solid rgba(44, 30, 20, 0.12);
+
+            padding: 5px 12px;
+
+            border-radius: 20px;
+
+            font-weight: 600;
+
+            color: var(--clr-primary);
+
+            text-decoration: none;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: .4rem;
+
+            font-size: 0.82rem;
+
+            transition: all 0.25s ease;
+
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+
+        }
+
+        .pod-sub-platforms .platform-chip:hover {
+
+            border-color: var(--clr-gold);
+
+            color: var(--clr-gold-dark);
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 4px 12px rgba(197, 160, 89, 0.2);
+
+        }
+
+        /* Responsive */
+
+        @media (max-width: 1024px) {
+
+            .pod-episodes-grid { grid-template-columns: repeat(2,1fr); }
+
+            .pod-subscribe-inner { grid-template-columns: 1fr; }
+
+        }
+
+        @media (max-width: 640px) {
+
+            .pod-hero h1 { font-size: 2rem; }
+
+            .pod-episodes-grid { grid-template-columns: 1fr; }
+
+            .pod-ep-header-inner { flex-direction: column; align-items: flex-start; }
+
+            .pod-sub-form { flex-direction: column; }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!-- Skip to Main Content Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="podcast-page-wrap">
+
+    <!-- -- Navigation -- -->
+    <nav class="navbar" id="navbar" aria-label="Main Navigation">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" aria-label="Sattvic Books Home">
+                <img src="assets/sattvic-books-logo.png" alt="Sattvic Books - Wisdom Unfolding" class="brand-logo-img">
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="https://web.mytiny.us/sattvic-books/shop/">Books</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li class="nav-dropdown">
+                    <a href="press-releases.html" class="nav-dropdown-toggle">Press Release <i class="fa-solid fa-chevron-down nav-dropdown-arrow"></i></a>
+                    <ul class="nav-submenu">
+                        <li><a href="media-press.html">Media &amp; Press</a></li>
+                        <li><a href="press-kit.html">Press Kit</a></li>
+                        <li><a href="reading-partners.html">Reading Partners</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://web.mytiny.us/sattvic-books/blog/">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation menu"><i class="fa-solid fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main id="main-content">
+
+    <!-- -- Hero Banner -- -->
+    <header class="pod-hero">
+
+        <div class="container pod-hero-inner fade-in">
+
+            <div class="pod-hero-badge"><i class="fa-solid fa-microphone-lines"></i> Now Streaming</div>
+
+            <span class="eyebrow text-gold" style="margin-bottom:.5rem;">Audio Wisdom</span>
+
+            <h1>The Sattvic Podcast</h1>
+
+            <p class="pod-hero-sub">Conversations on spirituality, mindful living, conscious food, inner healing, and ancient wisdom &mdash; brought to life for modern seekers.</p>
+
+            <div class="pod-platforms">
+
+                <a href="#" class="pod-plat-btn" id="pod-spotify"><i class="fa-brands fa-spotify"></i> Spotify</a>
+
+                <a href="#" class="pod-plat-btn" id="pod-apple"><i class="fa-brands fa-apple"></i> Apple Podcasts</a>
+
+                <a href="#" class="pod-plat-btn" id="pod-yt"><i class="fa-brands fa-youtube"></i> YouTube</a>
+
+                <a href="#" class="pod-plat-btn" id="pod-google"><i class="fa-brands fa-google"></i> Google Podcasts</a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- -- YouTube Embed (Latest Episode) -- -->
+
+    <section class="pod-yt-section">
+
+        <div class="container">
+
+            <div class="pod-yt-wrap fade-in-up">
+
+                <span class="pod-yt-label"><i class="fa-solid fa-circle-play"></i> &nbsp;Latest Episode</span>
+
+                <h2 class="pod-yt-title">The Sattvic Podcast &mdash; Full Episodes</h2>
+
+                <!-- YouTube playlist embed &mdash; replace with real channel ID / playlist ID -->
+
+                <div class="pod-yt-embed">
+
+                    <iframe
+
+                        src="https://www.youtube.com/embed/videoseries?list=PLbpi6ZahtOH6Ar_3GPy3workgxjmqaDM&autoplay=0"
+
+                        title="The Sattvic Podcast YouTube Playlist"
+
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+
+                        allowfullscreen>
+
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- -- Episodes Header Bar -- -->
+
+    <div class="pod-ep-header">
+
+        <div class="container pod-ep-header-inner">
+
+            <h2>All Episodes</h2>
+
+            <div class="pod-filter-tabs" id="podFilterTabs">
+
+                <button class="pod-filter-btn active" data-filter="all">All</button>
+
+                <button class="pod-filter-btn" data-filter="spiritual">Spiritual</button>
+
+                <button class="pod-filter-btn" data-filter="food">Food &amp; Wellness</button>
+
+                <button class="pod-filter-btn" data-filter="books">Book Talks</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- -- Episodes Grid &mdash; 3-col layout -- -->
+
+    <section class="pod-grid-section">
+
+        <div class="container">
+
+            <div class="pod-episodes-grid" id="podGrid">
+
+                <!-- Episode 12 -->
+
+                <div class="pod-ep-card fade-in-up" data-filter="spiritual" style="animation-delay:.05s">
+
+                    <div class="ep-img-wrap">
+
+                        <img src="assets/ep-swami-anand.jpg" alt="The Art of Stillness with Swami Anand" loading="lazy">
+
+                        <div class="ep-img-overlay"><i class="fa-solid fa-circle-play"></i></div>
+
+                    </div>
+
+                    <span class="ep-ep-label">Episode 12 · Spiritual Wisdom</span>
+
+                    <h3>The Art of Stillness: Finding Peace in a Distracted World with Swami Anand</h3>
+
+                    <div class="ep-meta">
+
+                        <span><i class="fa-regular fa-clock"></i> 54 min</span>
+
+                        <span><i class="fa-solid fa-headphones"></i> 4.2K listens</span>
+
+                        <span><i class="fa-regular fa-calendar"></i> Sep 2026</span>
+
+                    </div>
+
+                    <p class="ep-desc">Swami Anand explores how ancient practices of stillness and devotion can transform daily life. We discuss the nine divine feminine energies, the role of ritual in modern society, and why silence is the greatest teacher.</p>
+
+                    <a href="#" class="btn-listen" onclick="alert('Full episode on Spotify & Apple Podcasts!'); return false;"><i class="fa-solid fa-play"></i> Listen Now</a>
+
+                </div>
+
+                <!-- Episode 11 -->
+
+                <div class="pod-ep-card fade-in-up" data-filter="food" style="animation-delay:.1s">
+
+                    <div class="ep-img-wrap">
+
+                        <img src="assets/ep-priya-sharma.jpg" alt="Sattvic Food & Wellness with Priya Sharma" loading="lazy">
+
+                        <div class="ep-img-overlay"><i class="fa-solid fa-circle-play"></i></div>
+
+                    </div>
+
+                    <span class="ep-ep-label">Episode 11 · Food &amp; Wellness</span>
+
+                    <h3>High-Protein Sattvic Cooking: Nourishing the Body &amp; Soul with Priya Sharma</h3>
+
+                    <div class="ep-meta">
+
+                        <span><i class="fa-regular fa-clock"></i> 42 min</span>
+
+                        <span><i class="fa-solid fa-headphones"></i> 3.1K listens</span>
+
+                        <span><i class="fa-regular fa-calendar"></i> Aug 2026</span>
+
+                    </div>
+
+                    <p class="ep-desc">A deep dive into plant-based high-protein cooking aligned with Sattvic principles, Ayurveda, and modern wellness science &mdash; practical recipes and nutrition wisdom for every kitchen.</p>
+
+                    <a href="#" class="btn-listen" onclick="alert('Full episode on Spotify & Apple Podcasts!'); return false;"><i class="fa-solid fa-play"></i> Listen Now</a>
+
+                </div>
+
+                <!-- Episode 10 -->
+
+                <div class="pod-ep-card fade-in-up" data-filter="books" style="animation-delay:.15s">
+
+                    <div class="ep-img-wrap">
+
+                        <img src="assets/ep-banyan.jpg" alt="BANYAN: A Healing Journey" loading="lazy">
+
+                        <div class="ep-img-overlay"><i class="fa-solid fa-circle-play"></i></div>
+
+                    </div>
+
+                    <span class="ep-ep-label">Episode 10 · Book Talk</span>
+
+                    <h3>BANYAN: The Story Behind a Wordless Healing Book</h3>
+
+                    <div class="ep-meta">
+
+                        <span><i class="fa-regular fa-clock"></i> 38 min</span>
+
+                        <span><i class="fa-solid fa-headphones"></i> 2.8K listens</span>
+
+                        <span><i class="fa-regular fa-calendar"></i> Aug 2026</span>
+
+                    </div>
+
+                    <p class="ep-desc">The editorial team discusses the creative process, meaning, and healing power behind BANYAN &mdash; a book with no words but infinite depth that has moved readers across the world.</p>
+
+                    <a href="#" class="btn-listen" onclick="alert('Full episode on Spotify & Apple Podcasts!'); return false;"><i class="fa-solid fa-play"></i> Listen Now</a>
+
+                </div>
+
+                <!-- Episode 9 -->
+
+                <div class="pod-ep-card fade-in-up" data-filter="spiritual" style="animation-delay:.2s">
+
+                    <div class="ep-img-wrap" style="background: linear-gradient(135deg,#4B2E83,#7B5EA7); display:flex; align-items:center; justify-content:center;">
+
+                        <div style="text-align:center; color:#fff; padding:2rem;">
+
+                            <i class="fa-solid fa-yin-yang" style="font-size:4rem; color:rgba(255,255,255,.3); margin-bottom:1rem; display:block;"></i>
+
+                            <div style="font-size:1.3rem; font-weight:700; line-height:1.3;">NAVDURGA<br><span style="color:rgba(255,255,255,.7); font-size:.9rem; font-weight:400;">Divine Feminine</span></div>
+
+                        </div>
+
+                    </div>
+
+                    <span class="ep-ep-label">Episode 9 · Spiritual Wisdom</span>
+
+                    <h3>Navdurga: Understanding the Nine Divine Feminine Energies with Dr. Aruna Mishra</h3>
+
+                    <div class="ep-meta">
+
+                        <span><i class="fa-regular fa-clock"></i> 61 min</span>
+
+                        <span><i class="fa-solid fa-headphones"></i> 5.0K listens</span>
+
+                        <span><i class="fa-regular fa-calendar"></i> Jul 2026</span>
+
+                    </div>
+
+                    <p class="ep-desc">A rich scholarly discussion on how the nine aspects of Durga serve as archetypes for strength, courage, and transcendence in everyday life &mdash; applicable across spiritual traditions.</p>
+
+                    <a href="#" class="btn-listen" onclick="alert('Full episode on Spotify & Apple Podcasts!'); return false;"><i class="fa-solid fa-play"></i> Listen Now</a>
+
+                </div>
+
+                <!-- Episode 8 -->
+
+                <div class="pod-ep-card fade-in-up" data-filter="food" style="animation-delay:.25s">
+
+                    <div class="ep-img-wrap">
+
+                        <img src="assets/ep-dr-ramesh.jpg" alt="Eating for Clarity with Dr. Ramesh Iyer" loading="lazy">
+
+                        <div class="ep-img-overlay"><i class="fa-solid fa-circle-play"></i></div>
+
+                    </div>
+
+                    <span class="ep-ep-label">Episode 8 · Food &amp; Wellness</span>
+
+                    <h3>Eating for Clarity: How Food Affects Your Mind &amp; Consciousness with Dr. Ramesh Iyer</h3>
+
+                    <div class="ep-meta">
+
+                        <span><i class="fa-regular fa-clock"></i> 49 min</span>
+
+                        <span><i class="fa-solid fa-headphones"></i> 3.7K listens</span>
+
+                        <span><i class="fa-regular fa-calendar"></i> Jul 2026</span>
+
+                    </div>
+
+                    <p class="ep-desc">How the Sattvic diet directly impacts mental clarity, emotional balance, and spiritual receptivity &mdash; backed by both Ayurvedic tradition and modern neuroscience research.</p>
+
+                    <a href="#" class="btn-listen" onclick="alert('Full episode on Spotify & Apple Podcasts!'); return false;"><i class="fa-solid fa-play"></i> Listen Now</a>
+
+                </div>
+
+                <!-- Episode 7 -->
+
+                <div class="pod-ep-card fade-in-up" data-filter="books" style="animation-delay:.3s">
+
+                    <div class="ep-img-wrap">
+
+                        <img src="assets/ep-dr-elena.jpg" alt="The Sattvic Method with Dr. Elena Vance" loading="lazy">
+
+                        <div class="ep-img-overlay"><i class="fa-solid fa-circle-play"></i></div>
+
+                    </div>
+
+                    <span class="ep-ep-label">Episode 7 · Book Talk</span>
+
+                    <h3>The Sattvic Method: Conscious Living in 7 Principles with Dr. Elena Vance</h3>
+
+                    <div class="ep-meta">
+
+                        <span><i class="fa-regular fa-clock"></i> 57 min</span>
+
+                        <span><i class="fa-solid fa-headphones"></i> 4.6K listens</span>
+
+                        <span><i class="fa-regular fa-calendar"></i> Jun 2026</span>
+
+                    </div>
+
+                    <p class="ep-desc">Dr. Vance unpacks the seven core principles of The Sattvic Method and shares how readers around the world have transformed their daily lives through conscious, purposeful living.</p>
+
+                    <a href="#" class="btn-listen" onclick="alert('Full episode on Spotify & Apple Podcasts!'); return false;"><i class="fa-solid fa-play"></i> Listen Now</a>
+
+                </div>
+
+                <!-- Episode 6 (CSS-illustrated) -->
+
+                <div class="pod-ep-card fade-in-up" data-filter="spiritual" style="animation-delay:.35s">
+
+                    <div class="ep-img-wrap" style="background: linear-gradient(135deg, #382413, #4A3319); display:flex; align-items:center; justify-content:center;">
+
+                        <div style="text-align:center; padding:2rem; color:#fff;">
+
+                            <i class="fa-solid fa-seedling" style="font-size:4rem; color:rgba(197,160,89,.5); margin-bottom:1rem; display:block;"></i>
+
+                            <div style="font-size:1.3rem; font-weight:700; line-height:1.3;">CONSCIOUS<br>PARENTING<br><span style="color:rgba(255,255,255,.65); font-size:.9rem; font-weight:400;">Raising Sattvic Children</span></div>
+
+                        </div>
+
+                    </div>
+
+                    <span class="ep-ep-label">Episode 6 · Spiritual Wisdom</span>
+
+                    <h3>Raising Sattvic Children: Planting Seeds of Wisdom in Young Minds</h3>
+
+                    <div class="ep-meta">
+
+                        <span><i class="fa-regular fa-clock"></i> 45 min</span>
+
+                        <span><i class="fa-solid fa-headphones"></i> 2.4K listens</span>
+
+                        <span><i class="fa-regular fa-calendar"></i> Jun 2026</span>
+
+                    </div>
+
+                    <p class="ep-desc">A conversation on conscious parenting, instilling Sattvic values in young minds, and how children's books can serve as profound tools for nurturing empathy, kindness, and spiritual curiosity.</p>
+
+                    <a href="#" class="btn-listen" onclick="alert('Full episode on Spotify & Apple Podcasts!'); return false;"><i class="fa-solid fa-play"></i> Listen Now</a>
+
+                </div>
+
+                <!-- Episode 5 -->
+
+                <div class="pod-ep-card fade-in-up" data-filter="food" style="animation-delay:.4s">
+
+                    <div class="ep-img-wrap" style="background: linear-gradient(135deg,#7B5E2A,#C5A059); display:flex; align-items:center; justify-content:center;">
+
+                        <div style="text-align:center; padding:2rem; color:#fff;">
+
+                            <i class="fa-solid fa-bowl-food" style="font-size:4rem; color:rgba(255,255,255,.35); margin-bottom:1rem; display:block;"></i>
+
+                            <div style="font-size:1.3rem; font-weight:700; line-height:1.3;">AYURVEDIC<br>KITCHEN<br><span style="color:rgba(255,255,255,.7); font-size:.9rem; font-weight:400;">Ancient Recipes</span></div>
+
+                        </div>
+
+                    </div>
+
+                    <span class="ep-ep-label">Episode 5 · Food &amp; Wellness</span>
+
+                    <h3>The Ayurvedic Kitchen: Ancient Recipes for a Modern World</h3>
+
+                    <div class="ep-meta">
+
+                        <span><i class="fa-regular fa-clock"></i> 51 min</span>
+
+                        <span><i class="fa-solid fa-headphones"></i> 3.3K listens</span>
+
+                        <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+
+                    </div>
+
+                    <p class="ep-desc">Exploring the six tastes of Ayurveda, seasonal eating, and how traditional Indian recipes can be adapted for busy modern lives without losing their healing potency and nutritional wisdom.</p>
+
+                    <a href="#" class="btn-listen" onclick="alert('Full episode on Spotify & Apple Podcasts!'); return false;"><i class="fa-solid fa-play"></i> Listen Now</a>
+
+                </div>
+
+                <!-- Episode 4 -->
+
+                <div class="pod-ep-card fade-in-up" data-filter="books" style="animation-delay:.45s">
+
+                    <div class="ep-img-wrap" style="background: linear-gradient(135deg,#1A5080,#3A86C8); display:flex; align-items:center; justify-content:center;">
+
+                        <div style="text-align:center; padding:2rem; color:#fff;">
+
+                            <i class="fa-solid fa-pen-fancy" style="font-size:4rem; color:rgba(255,255,255,.35); margin-bottom:1rem; display:block;"></i>
+
+                            <div style="font-size:1.3rem; font-weight:700; line-height:1.3;">GUIDED<br>JOURNALING<br><span style="color:rgba(255,255,255,.7); font-size:.9rem; font-weight:400;">Inner Dialogue</span></div>
+
+                        </div>
+
+                    </div>
+
+                    <span class="ep-ep-label">Episode 4 · Book Talk</span>
+
+                    <h3>The Power of the Written Page: Guided Journals as a Spiritual Practice</h3>
+
+                    <div class="ep-meta">
+
+                        <span><i class="fa-regular fa-clock"></i> 36 min</span>
+
+                        <span><i class="fa-solid fa-headphones"></i> 2.1K listens</span>
+
+                        <span><i class="fa-regular fa-calendar"></i> May 2026</span>
+
+                    </div>
+
+                    <p class="ep-desc">How a daily journaling practice, guided by mindful prompts, can become one of the most powerful tools for self-discovery, healing, and conscious living available to anyone.</p>
+
+                    <a href="#" class="btn-listen" onclick="alert('Full episode on Spotify & Apple Podcasts!'); return false;"><i class="fa-solid fa-play"></i> Listen Now</a>
+
+                </div>
+
+            </div><!-- end grid -->
+
+            <!-- Load More -->
+
+            <div class="text-center mt-4">
+
+                <button class="btn btn-outline" id="loadMoreBtn" style="border-color:var(--clr-primary); color:var(--clr-primary);">
+
+                    <i class="fa-solid fa-plus"></i> &nbsp;Load More Episodes
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- -- Subscribe Bar (Distinct Contrast Card Section) -- -->
+    <section class="pod-subscribe-bar">
+        <div class="container">
+            <div class="pod-subscribe-box fade-in">
+                <div class="pod-subscribe-inner">
+                    <div>
+                        <span class="eyebrow text-gold" style="margin-bottom:.4rem;">Never Miss an Episode</span>
+                        <h2>Subscribe to The Sattvic Podcast</h2>
+                        <p>Get notified whenever a new episode drops. Join thousands of listeners on a journey of wisdom, healing, and conscious living.</p>
+                    </div>
+
+                    <div>
+                        <form class="pod-sub-form" id="podSubForm">
+                            <input type="email" placeholder="Enter your email address..." required id="podSubEmail">
+                            <button type="submit" class="btn-subscribe"><i class="fa-solid fa-bell"></i> Subscribe Free</button>
+                        </form>
+
+                        <div class="pod-sub-platforms">
+                            <span style="font-weight: 600; color: var(--clr-primary);">Listen On:</span>
+                            <a href="#" class="platform-chip" aria-label="Listen to The Sattvic Podcast on Spotify"><i class="fa-brands fa-spotify" style="color: #1DB954;"></i> Spotify</a>
+                            <a href="#" class="platform-chip" aria-label="Listen to The Sattvic Podcast on Apple Podcasts"><i class="fa-brands fa-apple" style="color: #111111;"></i> Apple</a>
+                            <a href="#" class="platform-chip" aria-label="Watch The Sattvic Podcast on YouTube"><i class="fa-brands fa-youtube" style="color: #FF0000;"></i> YouTube</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- -- Footer -- -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo footer-logo" aria-label="Sattvic Books Home">
+                        <div class="footer-logo-box">
+                            <img src="assets/sattvic-books-logo.png" alt="Sattvic Books - Wisdom Unfolding" class="footer-brand-logo-img">
+                        </div>
+                    </a>
+                    <p>Publishing works that enrich the mind, nourish the spirit, and inspire conscious living.</p>
+                    <div style="margin-top: 1rem; margin-bottom: 1.5rem;">
+                        <a href="#catalogModal" class="btn footer-catalog-btn open-catalog-modal"><i class="fa-solid fa-file-pdf"></i> Download Free Catalog</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/sattvicbooks/" target="_blank" rel="noopener noreferrer" class="social-instagram" aria-label="Follow Sattvic Books on Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@SattvicBooks" target="_blank" rel="noopener noreferrer" class="social-youtube" aria-label="Follow Sattvic Books on YouTube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.pinterest.com/sattvicbooks/" target="_blank" rel="noopener noreferrer" class="social-pinterest" aria-label="Follow Sattvic Books on Pinterest" title="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="https://www.threads.com/@sattvicbooks" target="_blank" rel="noopener noreferrer" class="social-threads" aria-label="Follow Sattvic Books on Threads" title="Threads"><i class="fa-brands fa-threads"></i></a>
+                        <a href="https://www.tiktok.com/sattvicbooks" target="_blank" rel="noopener noreferrer" class="social-tiktok" aria-label="Follow Sattvic Books on TikTok" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links-two-col">
+                        <li><a href="index.html#catalogs">Catalog</a></li>
+                        <li><a href="https://web.mytiny.us/sattvic-books/shop/">Books</a></li>
+                        <li><a href="https://web.mytiny.us/sattvic-books/blog/">Blog</a></li>
+                        <li><a href="index.html#gift-store">Gift Store</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="index.html#freebies">Giveaways</a></li>
+                        <li><a href="index.html#media-hub">Book Club</a></li>
+                        <li><a href="press-releases.html">Press Release</a></li>
+                        <li><a href="podcast.html">Podcast</a></li>
+                        <li><a href="#catalogModal" class="open-catalog-modal">Download Free Catalog</a></li>
+                        <li><a href="about.html#philosophy">Our Philosophy</a></li>
+                        <li><a href="about.html#mission-vision">Our Mission &amp; Vision</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Shipping &amp; Returns</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sattvic Books. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</div><!-- end .podcast-page-wrap -->
+
+<!-- Download Catalog Lead Capture Modal (Zoho Form Integration) -->
+    <div class="modal-overlay" id="catalogModal">
+        <div class="modal-box fade-in-up">
+            <button class="modal-close" id="closeCatalogModal" aria-label="Close catalog modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="catalog-modal-badge">
+                <img src="assets/sattvic-books-logo.png" alt="Sattvic Books - Wisdom Unfolding">
+            </div>
+            <h3 class="catalog-modal-title">Download Our 2026 Catalog</h3>
+            <p class="catalog-modal-subtitle">Enter your name and email to receive our complete 2026 publishing catalog (PDF) instantly.</p>
+            <div class="catalog-iframe-container">
+                <iframe aria-label='Download Our 2026 Catalog' frameborder="0" src='https://forms.zohopublic.com/livingsattva/form/DownloadOur2026Catalog/formperma/uZmkarAbxpP19cjovLO3ooMJjmVxX6AuzY70ZZ_yh14'>
+                </iframe>
+            </div>
+            <p class="catalog-modal-privacy">
+                <i class="fa-solid fa-shield-halved"></i> We respect your privacy. No spam, ever.
+            </p>
+        </div>
+    </div>
+    <!-- Floating Vertical Download Free Catalog Button (Right Side) -->
+    <a href="#catalogModal" class="floating-vertical-btn open-catalog-modal" title="Download Free Catalog" aria-label="Download Free 2026 Catalog">
+        <i class="fa-solid fa-file-pdf"></i>
+        <span>Download Free Catalog</span>
+    </a>
+
+    <!-- Core Script -->
+    <script src="script.js"></script>
+
+    <!-- Podcast Page Specific Filter & Subscribe Script -->
+    <script>
+    (function() {
+        const filterBtns = document.querySelectorAll('.pod-filter-btn');
+        const epCards = document.querySelectorAll('.pod-ep-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const f = btn.dataset.filter;
+                epCards.forEach(card => {
+                    card.style.display = (f === 'all' || card.dataset.filter === f) ? 'flex' : 'none';
+                });
+            });
+        });
+
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', () => {
+                loadMoreBtn.textContent = 'All Episodes Loaded';
+                loadMoreBtn.disabled = true;
+                loadMoreBtn.style.opacity = '.5';
+            });
+        }
+
+        const podSubForm = document.getElementById('podSubForm');
+        if (podSubForm) {
+            podSubForm.addEventListener('submit', e => {
+                e.preventDefault();
+                podSubForm.innerHTML = '<p style="color:#fff;font-size:1.1rem;"><i class="fa-solid fa-circle-check" style="color:var(--clr-gold);margin-right:.5rem;"></i><strong>Thank you!</strong> You will be notified when new episodes drop.</p>';
+            });
+        }
+    })();
+    </script>
+</body>
+</html>

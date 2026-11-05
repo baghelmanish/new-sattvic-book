@@ -1,0 +1,9 @@
+# robots.txt for Sattvic Books
+# https://sattvicbooks.com
+
+User-agent: *
+Allow: /
+Disallow: /cart.html
+
+# Sitemap location
+Sitemap: https://sattvicbooks.com/sitemap.xml

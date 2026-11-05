@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | Sattvic Books</title>
+    <meta name="description" content="Review your selected Sattvic Books items, manage order quantities, and proceed to checkout securely.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#0F382C">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sattvicbooks.com/cart.html">
+    <meta property="og:title" content="Your Cart | Sattvic Books">
+    <meta property="og:description" content="Review your selected Sattvic Books items, manage order quantities, and proceed to checkout securely.">
+    <meta property="og:image" content="https://sattvicbooks.com/assets/sattvic-books-logo.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your Cart | Sattvic Books">
+    <meta name="twitter:description" content="Review your selected Sattvic Books items, manage order quantities, and proceed to checkout securely.">
+    <meta name="twitter:image" content="https://sattvicbooks.com/assets/sattvic-books-logo.png">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Shopping Cart",
+        "description": "Review items in your shopping cart at Sattvic Books.",
+        "url": "https://sattvicbooks.com/cart.html"
+    }
+    </script>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sattvicbooks.com/cart.html">
+
+    <!-- Favicon & Mobile Touch Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/sattvic-books-logo.png">
+    <link rel="apple-touch-icon" href="assets/sattvic-books-logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to Main Content Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" aria-label="Main Navigation">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" aria-label="Sattvic Books Home">
+                <img src="assets/sattvic-books-logo.png" alt="Sattvic Books - Wisdom Unfolding" class="brand-logo-img">
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="https://web.mytiny.us/sattvic-books/shop/">Books</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="index.html#media-hub">Book Club</a></li>
+                <li><a href="press-releases.html">Press Release</a></li>
+                <li><a href="https://web.mytiny.us/sattvic-books/blog/">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Toggle navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main id="main-content">
+
+    <!-- Cart Page Header (Unified Master Internal Header) -->
+    <header class="cart-header-bg">
+        <div class="container text-center fade-in">
+            <span class="eyebrow">Your Bag</span>
+            <h1>Shopping Cart &amp; Order</h1>
+            <p>Review your selected titles and proceed to secure checkout for physical books, eBooks, and journal collections.</p>
+        </div>
+    </header>
+
+    <!-- Cart Content -->
+    <section class="cart-section section-padding" style="min-height: 50vh;">
+        <div class="container">
+            <h2 class="sr-only">Cart Items and Order Summary</h2>
+            <div class="cart-layout fade-in-up" id="cartContainer">
+                <div class="cart-items" id="cartItemsList">
+                    <!-- Cart items injected by JS -->
+                </div>
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="cartSubtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>Calculated at checkout</span>
+                    </div>
+                    <hr class="summary-divider">
+                    <div class="summary-row total-row">
+                        <span>Total</span>
+                        <span id="cartTotal">$0.00</span>
+                    </div>
+                    <button class="btn btn-primary btn-block" id="checkoutBtn" style="width: 100%; margin-top: 1.5rem;">Proceed to Checkout</button>
+                    <a href="https://web.mytiny.us/sattvic-books/shop/" class="btn btn-outline btn-block" style="width: 100%; margin-top: 1rem; text-align: center;">Continue Shopping</a>
+                </div>
+            </div>
+            
+            <div id="emptyCartMessage" class="text-center" style="display: none; padding: 4rem 0;">
+                <i class="fa-solid fa-cart-arrow-down" style="font-size: 4rem; color: var(--clr-gold); margin-bottom: 1rem;"></i>
+                <h2>Your cart is currently empty.</h2>
+                <p>Looks like you haven't added any books to your cart yet.</p>
+                <a href="https://web.mytiny.us/sattvic-books/shop/" class="btn btn-primary mt-2">Browse Our Book Shelf</a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Cart Coming Soon Modal (For Checkout) -->
+    <div class="modal-overlay" id="checkoutModal">
+        <div class="modal-box fade-in-up">
+            <button class="modal-close" id="closeCheckoutModal" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-icon"><i class="fa-solid fa-credit-card"></i></div>
+            <h3>Checkout Coming Soon!</h3>
+            <p>Our payment gateway is currently under construction. Soon, you'll be able to purchase print and digital editions directly.</p>
+            <a href="index.html#coming-soon" class="btn btn-primary" id="notifyMeBtn">Get Notified</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo footer-logo" aria-label="Sattvic Books Home">
+                        <div class="footer-logo-box">
+                            <img src="assets/sattvic-books-logo.png" alt="Sattvic Books - Wisdom Unfolding" class="footer-brand-logo-img">
+                        </div>
+                    </a>
+                    <p>Publishing works that enrich the mind, nourish the spirit, and inspire conscious living.</p>
+                    <div style="margin-top: 1rem; margin-bottom: 1.5rem;">
+                        <a href="#catalogModal" class="btn footer-catalog-btn open-catalog-modal"><i class="fa-solid fa-file-pdf"></i> Download Free Catalog</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/sattvicbooks/" target="_blank" rel="noopener noreferrer" class="social-instagram" aria-label="Follow Sattvic Books on Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@SattvicBooks" target="_blank" rel="noopener noreferrer" class="social-youtube" aria-label="Follow Sattvic Books on YouTube" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.pinterest.com/sattvicbooks/" target="_blank" rel="noopener noreferrer" class="social-pinterest" aria-label="Follow Sattvic Books on Pinterest" title="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                        <a href="https://www.threads.com/@sattvicbooks" target="_blank" rel="noopener noreferrer" class="social-threads" aria-label="Follow Sattvic Books on Threads" title="Threads"><i class="fa-brands fa-threads"></i></a>
+                        <a href="https://www.tiktok.com/sattvicbooks" target="_blank" rel="noopener noreferrer" class="social-tiktok" aria-label="Follow Sattvic Books on TikTok" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links-two-col">
+                        <li><a href="index.html#catalogs">Catalog</a></li>
+                        <li><a href="https://web.mytiny.us/sattvic-books/shop/">Books</a></li>
+                        <li><a href="https://web.mytiny.us/sattvic-books/blog/">Blog</a></li>
+                        <li><a href="index.html#gift-store">Gift Store</a></li>
+                        <li><a href="index.html#why-buy">Why Sattvic Books</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="index.html#freebies">Giveaways</a></li>
+                        <li><a href="index.html#media-hub">Book Club</a></li>
+                        <li><a href="press-releases.html">Press Release</a></li>
+                        <li><a href="#" class="open-catalog-modal">Download Free Catalog</a></li>
+                        <li><a href="index.html#philosophy">Our Philosophy</a></li>
+                        <li><a href="index.html#mission-vision">Our Mission &amp; Vision</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Shipping &amp; Returns</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sattvic Books. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Catalog Lead Modal -->
+    <div class="modal-overlay" id="catalogModal">
+        <div class="modal-box fade-in-up" style="max-width: 500px;">
+            <button class="modal-close" id="closeCatalogModal" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-logo-box" style="background-color: rgba(197, 160, 89, 0.15); border-radius: 10px; padding: 0.85rem 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center;">
+                <img src="assets/sattvic-books-logo.png" alt="Sattvic Books - Wisdom Unfolding" style="max-height: 52px; width: auto; max-width: 240px; object-fit: contain;">
+            </div>
+            <h3>Download Our 2026 Catalog</h3>
+            <p>Please enter your details to receive our complete 2026 publishing catalog (PDF).</p>
+            <form id="catalogForm" style="margin-top: 1.5rem; text-align: left;">
+                <div style="margin-bottom: 1rem;">
+                    <label for="cartCatName" style="display:block; font-size:0.9rem; margin-bottom:0.4rem; color:var(--clr-text);">Your Full Name</label>
+                    <input type="text" id="cartCatName" placeholder="e.g. Maya Sharma" required style="width:100%; padding:0.8rem; border:1px solid #ccc; border-radius:8px;">
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="cartCatEmail" style="display:block; font-size:0.9rem; margin-bottom:0.4rem; color:var(--clr-text);">Email Address</label>
+                    <input type="email" id="cartCatEmail" placeholder="e.g. maya@example.com" required style="width:100%; padding:0.8rem; border:1px solid #ccc; border-radius:8px;">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fa-solid fa-envelope"></i> Check email to receive PDF</button>
+                <p class="modal-disclaimer" style="margin-top: 0.85rem; margin-bottom: 0; font-size: 0.82rem; color: var(--clr-text-light); text-align: center; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
+                    <i class="fa-solid fa-shield-halved" style="color: var(--clr-gold); font-size: 0.85rem;"></i> We do not share your information to other people
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating Vertical Download Free Catalog Button (Right Side) -->
+    <a href="#catalogModal" class="floating-vertical-btn open-catalog-modal" title="Download Free Catalog" aria-label="Download Free 2026 Catalog">
+        <i class="fa-solid fa-file-pdf"></i>
+        <span>Download Free Catalog</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <!-- Elegant Vedic Botanical Corner Flourish -->
+  <g opacity="0.45" stroke="#C5A059" stroke-linecap="round">
+    <!-- Main stem curling outward -->
+    <path d="M0,0 C60,10 120,40 160,95 C190,135 205,180 215,235" stroke-width="1.8" fill="none" opacity="0.7"/>
+    <!-- Secondary inner stem -->
+    <path d="M0,35 C45,45 95,75 130,125 C155,160 165,195 172,240" stroke-width="1.2" fill="none" opacity="0.5"/>
+    <!-- Third delicate vine -->
+    <path d="M35,0 C50,40 80,85 115,115 C145,140 180,165 225,180" stroke-width="1" fill="none" opacity="0.4"/>
+  </g>
+  <!-- Leaves and lotus petals along main stem -->
+  <g fill="#D4AF37" opacity="0.32">
+    <!-- Leaf 1 -->
+    <path d="M45,12 C65,18 70,35 55,42 C40,40 38,25 45,12 Z"/>
+    <!-- Leaf 2 -->
+    <path d="M80,28 C105,35 110,58 90,65 C72,60 70,42 80,28 Z"/>
+    <!-- Leaf 3 -->
+    <path d="M115,55 C145,65 148,92 125,98 C105,92 102,70 115,55 Z"/>
+    <!-- Leaf 4 -->
+    <path d="M148,95 C178,110 178,138 155,142 C135,134 135,110 148,95 Z"/>
+    <!-- Leaf 5 -->
+    <path d="M175,140 C205,160 200,188 180,190 C162,180 162,158 175,140 Z"/>
+    <!-- Leaf 6 (Tip bud) -->
+    <path d="M198,195 C222,215 218,235 202,238 C190,230 190,210 198,195 Z"/>
+  </g>
+  <!-- Smaller delicate leaves on secondary stem -->
+  <g fill="#E2C27E" opacity="0.25">
+    <path d="M25,45 C40,55 38,70 25,68 C15,62 18,50 25,45 Z"/>
+    <path d="M65,72 C85,82 82,100 68,98 C55,90 55,78 65,72 Z"/>
+    <path d="M100,110 C120,122 118,140 102,138 C88,130 90,118 100,110 Z"/>
+    <path d="M135,155 C155,170 150,188 135,185 C122,176 125,164 135,155 Z"/>
+  </g>
+  <!-- Golden accents / seeds -->
+  <circle cx="218" cy="237" r="3" fill="#C5A059" opacity="0.5"/>
+  <circle cx="174" cy="242" r="2.5" fill="#C5A059" opacity="0.4"/>
+  <circle cx="227" cy="182" r="2.5" fill="#C5A059" opacity="0.4"/>
+  <circle cx="162" cy="98" r="2" fill="#D4AF37" opacity="0.4"/>
+  <circle cx="128" cy="58" r="2" fill="#D4AF37" opacity="0.4"/>
+</svg>
+
