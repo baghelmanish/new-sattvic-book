@@ -6542,29 +6542,41 @@ img, video, iframe {
         cursor: pointer;
     }
 
-    /* Floating Download Catalog Button on Mobile: Compact Floating Bottom-Right Pill */
+    /* Floating Download Catalog Button on Mobile: Perfectly Centered Floating Bottom Pill */
     .floating-vertical-btn {
-        top: auto;
-        bottom: 20px;
-        right: 15px;
-        transform: none !important;
+        top: auto !important;
+        bottom: 20px !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
         writing-mode: horizontal-tb !important;
-        border-radius: 30px !important;
+        border-radius: 50px !important;
         border: 2px solid var(--clr-gold) !important;
-        padding: 0.65rem 1.2rem !important;
-        font-size: 0.78rem !important;
+        padding: 0.72rem 1.6rem !important;
+        font-size: 0.82rem !important;
         flex-direction: row !important;
-        gap: 0.5rem !important;
-        box-shadow: 0 6px 22px rgba(0,0,0,0.3) !important;
-        z-index: 999;
+        gap: 0.55rem !important;
+        box-shadow: 0 6px 22px rgba(0,0,0,0.35) !important;
+        z-index: 999999 !important;
+        width: max-content !important;
+        max-width: calc(100vw - 32px) !important;
+        box-sizing: border-box !important;
+        white-space: nowrap !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
     .floating-vertical-btn:hover {
-        transform: none !important;
+        transform: translateX(-50%) translateY(-2px) !important;
+    }
+
+    .floating-vertical-btn:active {
+        transform: translateX(-50%) scale(0.98) !important;
     }
 
     .floating-vertical-btn i {
-        font-size: 0.95rem;
+        font-size: 1rem !important;
     }
 
     /* Hero Sections */
@@ -6899,8 +6911,12 @@ img, video, iframe {
     }
 
     .floating-vertical-btn {
-        right: 10px;
-        bottom: 15px;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        bottom: 16px !important;
+        width: max-content !important;
+        max-width: calc(100vw - 24px) !important;
     }
 }
 
@@ -10912,22 +10928,50 @@ button[type="submit"]:not(.modal-close):hover {
     .floating-vertical-btn {
         top: auto !important;
         bottom: 20px !important;
-        right: 15px !important;
-        transform: none !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
         writing-mode: horizontal-tb !important;
         border-radius: 50px !important;
         border: 2px solid #855E20 !important;
-        padding: 0.7rem 1.4rem !important;
+        padding: 0.72rem 1.6rem !important;
         font-size: 0.82rem !important;
         box-shadow: 0 6px 22px rgba(0, 0, 0, 0.35) !important;
+        width: max-content !important;
+        max-width: calc(100vw - 32px) !important;
+        box-sizing: border-box !important;
+        white-space: nowrap !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0.55rem !important;
+        z-index: 999999 !important;
     }
 
     .floating-vertical-btn:hover {
-        transform: none !important;
+        transform: translateX(-50%) translateY(-2px) !important;
     }
 
     .floating-vertical-btn:active {
-        transform: scale(0.98) !important;
+        transform: translateX(-50%) scale(0.98) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-vertical-btn {
+        bottom: 16px !important;
+        padding: 0.68rem 1.35rem !important;
+        font-size: 0.79rem !important;
+        gap: 0.5rem !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .floating-vertical-btn {
+        bottom: 14px !important;
+        padding: 0.62rem 1.15rem !important;
+        font-size: 0.74rem !important;
+        letter-spacing: 0.4px !important;
     }
 }
 
