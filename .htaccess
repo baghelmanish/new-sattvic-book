@@ -1,15 +1,24 @@
-# Set DirectoryIndex so index.html loads by default at root
 DirectoryIndex index.html index.php
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
 
-# 1. Agar koi specific static file ya folder exist karta hai (HTML, CSS, JS, Images) toh wahi serve karo
+# 1. Agar koi browser mein direct .html likhe toh use 301 redirect karke bina .html par bhejo
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/([^.]+)\.html [NC]
+RewriteCond %{REQUEST_URI} !^/index\.html$ [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# 2. Agar clean URL manga jaye aur us naam ka .html file exist kare toh internally wahi load karo
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([a-zA-Z0-9_-]+)/?$ $1.html [L]
+
+# 3. Existing static files (CSS, JS, images, font, pdf) aur blog folder ko direct serve karo
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# 2. Agar /shop, /blog, /cart, /checkout ya product page manga jaye toh WordPress ko hand over karo
+# 4. WordPress pages (/shop, /cart, /checkout, /my-account, /product, /blog) ko WordPress ko hand over karo
 RewriteRule ^(shop|cart|checkout|my-account|product|blog) /blog/index.php [L,QSA]
 </IfModule>
