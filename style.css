@@ -957,7 +957,7 @@ a.btn {
     box-shadow: 0 20px 45px rgba(44, 30, 20, 0.14);
 }
 
-/* 3. Our Book Shelf (Featured Publications) — Warm Luxury Champagne Cream with Floral Watermarks */
+/* 3. Our Book Shelf (Featured Publications) — Warm Luxury Champagne Cream with Rich Botanical Floral Corner Art */
 .books {
     background-color: #F6EBDD !important;
     background: #F6EBDD !important;
@@ -972,7 +972,7 @@ a.btn {
     position: absolute;
     top: 0;
     left: 0;
-    width: 380px;
+    width: 360px;
     height: 320px;
     background-image: url('assets/floral-corner-left.png');
     background-size: contain;
@@ -980,7 +980,7 @@ a.btn {
     background-position: top left;
     pointer-events: none;
     z-index: 1;
-    opacity: 0.82;
+    opacity: 0.88;
 }
 
 .books::after {
@@ -988,7 +988,7 @@ a.btn {
     position: absolute;
     top: 0;
     right: 0;
-    width: 380px;
+    width: 360px;
     height: 320px;
     background-image: url('assets/floral-corner-right.png');
     background-size: contain;
@@ -996,7 +996,20 @@ a.btn {
     background-position: top right;
     pointer-events: none;
     z-index: 1;
-    opacity: 0.82;
+    opacity: 0.88;
+}
+
+@media (max-width: 768px) {
+    .books::before {
+        width: 175px !important;
+        height: 155px !important;
+        opacity: 0.80 !important;
+    }
+    .books::after {
+        width: 175px !important;
+        height: 155px !important;
+        opacity: 0.80 !important;
+    }
 }
 
 .books .container {
@@ -9020,12 +9033,27 @@ img, video, iframe {
     line-height: 1.6;
 }
 
-/* Reading Partnerships Grid */
+/* Reading Partnerships Grid - Symmetrical Centered Layout for all 5 cards */
 .partnerships-showcase-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin: 2.2rem 0;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 1.5rem !important;
+    margin: 2.2rem 0 !important;
+}
+
+.partnerships-showcase-grid .partner-showcase-card {
+    flex: 1 1 290px !important;
+    max-width: 325px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+    .partnerships-showcase-grid .partner-showcase-card {
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+    }
 }
 
 .partner-showcase-card {
@@ -10469,7 +10497,8 @@ section:not(.bg-dark):not(.freebies-section) .eyebrow i,
     color: #D7B347 !important;
 }
 
-.footer a,
+/* Footer regular links (exclude buttons & social icons) */
+.footer a:not(.btn):not(.footer-catalog-btn):not(.footer-catalogue-btn):not(.social-links a):not(.footer-social a),
 .footer-links a,
 .footer-bottom-links a,
 .footer-bottom a {
@@ -10477,11 +10506,125 @@ section:not(.bg-dark):not(.freebies-section) .eyebrow i,
     transition: color 0.25s ease !important;
 }
 
-.footer a:hover,
+.footer a:not(.btn):not(.footer-catalog-btn):not(.footer-catalogue-btn):not(.social-links a):not(.footer-social a):hover,
 .footer-links a:hover,
 .footer-bottom-links a:hover,
 .footer-bottom a:hover {
     color: #D7B347 !important;
+}
+
+/* Footer Catalog & Action Buttons - Strict Dark Brown Typography matching all other buttons */
+.footer .btn,
+.footer a.btn,
+.footer .footer-catalog-btn,
+.footer a.footer-catalog-btn,
+.footer .footer-catalogue-btn,
+.footer a.footer-catalogue-btn,
+footer .btn,
+footer a.btn,
+footer .footer-catalog-btn,
+footer a.footer-catalog-btn,
+footer .footer-catalogue-btn,
+footer a.footer-catalogue-btn {
+    background: #D7B347 !important;
+    background-color: #D7B347 !important;
+    color: #382618 !important;
+    -webkit-text-fill-color: #382618 !important;
+}
+
+.footer .btn:visited,
+.footer a.btn:visited,
+.footer .footer-catalog-btn:visited,
+.footer a.footer-catalog-btn:visited,
+.footer .footer-catalogue-btn:visited,
+.footer a.footer-catalogue-btn:visited,
+footer .btn:visited,
+footer a.btn:visited,
+footer .footer-catalog-btn:visited,
+footer a.footer-catalog-btn:visited,
+footer .footer-catalogue-btn:visited,
+footer a.footer-catalogue-btn:visited {
+    color: #382618 !important;
+    -webkit-text-fill-color: #382618 !important;
+}
+
+.footer .btn:hover,
+.footer a.btn:hover,
+.footer .footer-catalog-btn:hover,
+.footer a.footer-catalog-btn:hover,
+.footer .footer-catalogue-btn:hover,
+.footer a.footer-catalogue-btn:hover,
+footer .btn:hover,
+footer a.btn:hover,
+footer .footer-catalog-btn:hover,
+footer a.footer-catalog-btn:hover,
+footer .footer-catalogue-btn:hover,
+footer a.footer-catalogue-btn:hover {
+    background: #C9A336 !important;
+    background-color: #C9A336 !important;
+    color: #20140B !important;
+    -webkit-text-fill-color: #20140B !important;
+    box-shadow: 0 6px 20px rgba(215, 179, 71, 0.5) !important;
+}
+
+.footer .btn:active,
+.footer a.btn:active,
+.footer .footer-catalog-btn:active,
+.footer a.footer-catalog-btn:active,
+.footer .footer-catalogue-btn:active,
+.footer a.footer-catalogue-btn:active,
+footer .btn:active,
+footer a.btn:active,
+footer .footer-catalog-btn:active,
+footer a.footer-catalog-btn:active,
+footer .footer-catalogue-btn:active,
+footer a.footer-catalogue-btn:active {
+    color: #20140B !important;
+    -webkit-text-fill-color: #20140B !important;
+}
+
+.footer .btn i,
+.footer .btn svg,
+.footer a.btn i,
+.footer a.btn svg,
+.footer .footer-catalog-btn i,
+.footer .footer-catalog-btn svg,
+.footer a.footer-catalog-btn i,
+.footer a.footer-catalog-btn svg,
+.footer .footer-catalogue-btn i,
+.footer .footer-catalogue-btn svg,
+.footer a.footer-catalogue-btn i,
+.footer a.footer-catalogue-btn svg,
+footer .btn i,
+footer a.btn i,
+footer .footer-catalog-btn i,
+footer a.footer-catalog-btn i,
+footer .footer-catalogue-btn i,
+footer a.footer-catalogue-btn i {
+    color: #382618 !important;
+    fill: #382618 !important;
+}
+
+.footer .btn:hover i,
+.footer .btn:hover svg,
+.footer a.btn:hover i,
+.footer a.btn:hover svg,
+.footer .footer-catalog-btn:hover i,
+.footer .footer-catalog-btn:hover svg,
+.footer a.footer-catalog-btn:hover i,
+.footer a.footer-catalog-btn:hover svg,
+.footer .footer-catalogue-btn:hover i,
+.footer .footer-catalogue-btn:hover svg,
+.footer a.footer-catalogue-btn:hover i,
+.footer a.footer-catalogue-btn:hover svg,
+footer .btn:hover i,
+footer a.btn:hover i,
+footer .footer-catalog-btn:hover i,
+footer a.footer-catalog-btn:hover i,
+footer .footer-catalogue-btn:hover i,
+footer a.footer-catalogue-btn:hover i {
+    color: #20140B !important;
+    fill: #20140B !important;
 }
 
 .footer-bottom {
@@ -11128,64 +11271,219 @@ section:not(.bg-dark) .next-event-cta-box p[style*="italic"] {
 /* ==========================================================================
    EXCLUSIVE DARK MODE SECTION COMPONENT STYLING (press-kit & reading-partners)
    ========================================================================== */
+/* At A Glance - White Luxury Cards inside Dark Section (like Our Philosophy section) */
 .bg-dark .brand-info-item,
 section.bg-dark .brand-info-item {
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1.5px solid rgba(215, 179, 71, 0.35) !important;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35) !important;
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    border: 1.5px solid rgba(215, 179, 71, 0.4) !important;
+    border-radius: 14px !important;
+    padding: 1.35rem 1.6rem !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35) !important;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.bg-dark .brand-info-item:hover,
+section.bg-dark .brand-info-item:hover {
+    border-color: #D7B347 !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45) !important;
 }
 
 .bg-dark .brand-info-item .info-label,
 section.bg-dark .brand-info-item .info-label {
-    color: #D7B347 !important;
+    color: #855E20 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.5px !important;
+    font-size: 0.82rem !important;
+    display: block !important;
+    margin-bottom: 0.4rem !important;
 }
 
 .bg-dark .brand-info-item .info-val,
 section.bg-dark .brand-info-item .info-val {
-    color: #FFFFFF !important;
+    color: #382618 !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
 }
 
+.bg-dark .brand-info-item .info-val a,
+section.bg-dark .brand-info-item .info-val a {
+    color: #855E20 !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+}
+
+.bg-dark .brand-info-item .info-val a:hover,
+section.bg-dark .brand-info-item .info-val a:hover {
+    color: #382618 !important;
+}
+
+/* Compliance & Attribution Box - White Luxury Card inside Dark Section */
+.press-compliance-box,
+.bg-dark .press-compliance-box,
+section.bg-dark .press-compliance-box {
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    border: 1.5px solid rgba(215, 179, 71, 0.4) !important;
+    border-radius: 16px !important;
+    padding: 2.5rem 2.8rem !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+    transition: all 0.3s ease !important;
+}
+
+.press-compliance-box:hover,
+.bg-dark .press-compliance-box:hover,
+section.bg-dark .press-compliance-box:hover {
+    border-color: #D7B347 !important;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45) !important;
+}
+
+.press-compliance-box p:first-of-type,
+.bg-dark .press-compliance-box p:first-of-type,
+section.bg-dark .press-compliance-box p:first-of-type {
+    color: #382618 !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
+    line-height: 1.85 !important;
+    margin-bottom: 1.2rem !important;
+}
+
+.press-compliance-box p:last-of-type,
+.bg-dark .press-compliance-box p:last-of-type,
+section.bg-dark .press-compliance-box p:last-of-type {
+    color: #5E4A39 !important;
+    font-size: 1.05rem !important;
+    font-weight: 500 !important;
+    line-height: 1.85 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Reading Partners Showcase Cards - White Luxury Cards inside Dark Section (like Our Philosophy section) */
 .bg-dark .partner-showcase-card,
 section.bg-dark .partner-showcase-card {
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1.5px solid rgba(215, 179, 71, 0.35) !important;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    border: 1.5px solid rgba(215, 179, 71, 0.4) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+    transition: all 0.35s ease !important;
+}
+
+.bg-dark .partner-showcase-card:hover,
+section.bg-dark .partner-showcase-card:hover {
+    border-color: #D7B347 !important;
+    transform: translateY(-5px) !important;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45) !important;
 }
 
 .bg-dark .partner-showcase-card h3,
 section.bg-dark .partner-showcase-card h3 {
-    color: #FFFFFF !important;
+    color: #382618 !important;
+    font-family: var(--font-heading) !important;
+    font-size: 1.3rem !important;
+    font-weight: 700 !important;
 }
 
 .bg-dark .partner-showcase-card p,
 section.bg-dark .partner-showcase-card p {
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: #5E4A39 !important;
+    font-size: 0.96rem !important;
+    line-height: 1.7 !important;
+    font-weight: 500 !important;
 }
 
 .bg-dark .partner-icon-circle,
 section.bg-dark .partner-icon-circle {
-    background: rgba(215, 179, 71, 0.18) !important;
-    border: 1.5px solid rgba(215, 179, 71, 0.5) !important;
-    color: #D7B347 !important;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    background: rgba(215, 179, 71, 0.16) !important;
+    border: 1.5px solid rgba(215, 179, 71, 0.38) !important;
+    color: #855E20 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 1.2rem auto !important;
+    font-size: 1.55rem !important;
+    transition: all 0.3s ease !important;
 }
 
+.bg-dark .partner-icon-circle i,
+section.bg-dark .partner-icon-circle i {
+    color: #855E20 !important;
+    fill: #855E20 !important;
+}
+
+.bg-dark .partner-showcase-card:hover .partner-icon-circle,
+section.bg-dark .partner-showcase-card:hover .partner-icon-circle {
+    background: #D7B347 !important;
+    border-color: #D7B347 !important;
+    color: #382618 !important;
+    transform: scale(1.08) !important;
+}
+
+.bg-dark .partner-showcase-card:hover .partner-icon-circle i,
+section.bg-dark .partner-showcase-card:hover .partner-icon-circle i {
+    color: #382618 !important;
+    fill: #382618 !important;
+}
+
+/* Institutional Access Cards - White Luxury Cards inside Dark Section */
 .bg-dark .category-showcase-card,
 section.bg-dark .category-showcase-card {
-    background: rgba(255, 255, 255, 0.05) !important;
-    border: 1.5px solid rgba(215, 179, 71, 0.35) !important;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    border: 1.5px solid rgba(215, 179, 71, 0.4) !important;
+    border-radius: 14px !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35) !important;
+    transition: all 0.3s ease !important;
+}
+
+.bg-dark .category-showcase-card:hover,
+section.bg-dark .category-showcase-card:hover {
+    border-color: #D7B347 !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45) !important;
 }
 
 .bg-dark .category-showcase-card h4,
 section.bg-dark .category-showcase-card h4 {
-    color: #FFFFFF !important;
+    color: #382618 !important;
+    font-family: var(--font-heading) !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
 }
 
 .bg-dark .category-showcase-card .cat-icon,
 section.bg-dark .category-showcase-card .cat-icon {
-    background: rgba(215, 179, 71, 0.18) !important;
-    border: 1.5px solid rgba(215, 179, 71, 0.5) !important;
-    color: #D7B347 !important;
+    background: rgba(215, 179, 71, 0.16) !important;
+    border: 1.5px solid rgba(215, 179, 71, 0.38) !important;
+    color: #855E20 !important;
+    transition: all 0.3s ease !important;
+}
+
+.bg-dark .category-showcase-card .cat-icon i,
+section.bg-dark .category-showcase-card .cat-icon i {
+    color: #855E20 !important;
+    fill: #855E20 !important;
+}
+
+.bg-dark .category-showcase-card:hover .cat-icon,
+section.bg-dark .category-showcase-card:hover .cat-icon {
+    background: #D7B347 !important;
+    border-color: #D7B347 !important;
+    color: #382618 !important;
+    transform: scale(1.08) !important;
+}
+
+.bg-dark .category-showcase-card:hover .cat-icon i,
+section.bg-dark .category-showcase-card:hover .cat-icon i {
+    color: #382618 !important;
+    fill: #382618 !important;
 }
 
 /* ==========================================================================
@@ -11202,8 +11500,12 @@ section.bg-dark .category-showcase-card .cat-icon {
 }
 
 @media (max-width: 768px) {
-    /* Event Page Button: Full width on mobile screens so it never clips or cuts off */
+    /* Event Page Button: High Specificity (0, 2, 1) + Guaranteed Responsive Text Wrapping */
+    a.btn.events-main-cta-btn,
+    a.events-main-cta-btn,
     .events-main-cta-btn,
+    .events-cta-wrap .btn,
+    .events-cta-wrap a.btn,
     .next-event-cta-box .btn,
     .next-event-cta-inner .btn {
         width: 100% !important;
@@ -11212,11 +11514,23 @@ section.bg-dark .category-showcase-card .cat-icon {
         align-items: center !important;
         justify-content: center !important;
         white-space: normal !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
         text-align: center !important;
-        padding: 0.9rem 1.2rem !important;
+        padding: 0.85rem 1.2rem !important;
         font-size: 0.95rem !important;
         line-height: 1.4 !important;
         box-sizing: border-box !important;
+        letter-spacing: 0.2px !important;
+    }
+
+    a.btn.events-main-cta-btn span,
+    .events-main-cta-btn span {
+        white-space: normal !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+        text-align: center !important;
+        display: inline !important;
     }
 
     /* Reading Partners Page Buttons: Full width on mobile screens so text never cuts off */
@@ -11253,6 +11567,17 @@ section.bg-dark .category-showcase-card .cat-icon {
 }
 
 @media (max-width: 576px) {
+    /* Event Page CTA Button on small screens: optimal size so text never overflows */
+    a.btn.events-main-cta-btn,
+    a.events-main-cta-btn,
+    .events-main-cta-btn,
+    .events-cta-wrap .btn,
+    .events-cta-wrap a.btn {
+        font-size: 0.88rem !important;
+        padding: 0.8rem 1rem !important;
+        line-height: 1.35 !important;
+    }
+
     /* Reading Partners Card Action Buttons & CTA on small screens */
     .custom-resource-actions {
         display: flex !important;
