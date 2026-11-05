@@ -11499,38 +11499,142 @@ section.bg-dark .category-showcase-card:hover .cat-icon i {
     overflow-wrap: anywhere !important;
 }
 
+/* Event Page Main CTA Button & Icon Architecture */
+.events-cta-wrap {
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+a.btn.events-main-cta-btn,
+a.events-main-cta-btn,
+.events-main-cta-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.65rem !important;
+    padding: 0.85rem 2.2rem !important;
+    border-radius: 50px !important;
+    background-color: #D7B347 !important;
+    color: #382618 !important;
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.3 !important;
+    letter-spacing: 0.25px !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 4px 18px rgba(215, 179, 71, 0.35) !important;
+    transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    white-space: nowrap !important;
+}
+
+a.btn.events-main-cta-btn:hover,
+.events-main-cta-btn:hover {
+    background-color: #C9A336 !important;
+    color: #20150D !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 22px rgba(215, 179, 71, 0.45) !important;
+}
+
+.events-main-cta-btn i,
+.events-main-cta-btn .events-cta-icon {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.15rem !important;
+    line-height: 1 !important;
+    color: #382618 !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    top: -1px !important;
+}
+
+.events-main-cta-btn .events-cta-text {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: 1.3 !important;
+}
+
+.events-main-cta-btn .events-cta-title {
+    display: inline !important;
+    font-weight: 700 !important;
+}
+
+.events-main-cta-btn .events-cta-divider {
+    display: inline !important;
+    opacity: 0.8 !important;
+    margin: 0 0.25rem !important;
+}
+
+.events-main-cta-btn .events-cta-action {
+    display: inline !important;
+    font-weight: 700 !important;
+}
+
 @media (max-width: 768px) {
-    /* Event Page Button: High Specificity (0, 2, 1) + Guaranteed Responsive Text Wrapping */
-    a.btn.events-main-cta-btn,
-    a.events-main-cta-btn,
-    .events-main-cta-btn,
-    .events-cta-wrap .btn,
-    .events-cta-wrap a.btn,
-    .next-event-cta-box .btn,
-    .next-event-cta-inner .btn {
+    /* Event Page Button: Balanced 2-Line Mobile Architecture with Perfect Left-Centered Icon */
+    .events-cta-wrap {
         width: 100% !important;
         max-width: 100% !important;
-        display: flex !important;
+        padding: 0 0.5rem !important;
+    }
+
+    a.btn.events-main-cta-btn,
+    a.events-main-cta-btn,
+    .events-main-cta-btn {
+        width: 100% !important;
+        max-width: 420px !important;
+        display: inline-flex !important;
         align-items: center !important;
         justify-content: center !important;
+        gap: 0.75rem !important;
+        padding: 0.85rem 1.6rem !important;
+        border-radius: 50px !important;
         white-space: normal !important;
-        word-break: normal !important;
-        overflow-wrap: break-word !important;
-        text-align: center !important;
-        padding: 0.85rem 1.2rem !important;
-        font-size: 0.95rem !important;
-        line-height: 1.4 !important;
         box-sizing: border-box !important;
+    }
+
+    .events-main-cta-btn i,
+    .events-main-cta-btn .events-cta-icon {
+        font-size: 1.3rem !important;
+        top: 0 !important;
+        flex-shrink: 0 !important;
+        margin: 0 !important;
+    }
+
+    .events-main-cta-btn .events-cta-text {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        line-height: 1.28 !important;
+    }
+
+    .events-main-cta-btn .events-cta-title {
+        display: block !important;
+        font-size: 0.92rem !important;
+        font-weight: 700 !important;
         letter-spacing: 0.2px !important;
     }
 
-    a.btn.events-main-cta-btn span,
-    .events-main-cta-btn span {
-        white-space: normal !important;
-        word-break: normal !important;
-        overflow-wrap: break-word !important;
-        text-align: center !important;
-        display: inline !important;
+    .events-main-cta-btn .events-cta-divider {
+        display: none !important;
+    }
+
+    .events-main-cta-btn .events-cta-action {
+        display: block !important;
+        font-size: 0.82rem !important;
+        font-weight: 600 !important;
+        opacity: 0.92 !important;
+        letter-spacing: 0.3px !important;
     }
 
     /* Reading Partners Page Buttons: Full width on mobile screens so text never cuts off */
@@ -11573,9 +11677,44 @@ section.bg-dark .category-showcase-card:hover .cat-icon i {
     .events-main-cta-btn,
     .events-cta-wrap .btn,
     .events-cta-wrap a.btn {
+        max-width: 100% !important;
+        padding: 0.82rem 1.4rem !important;
+        gap: 0.65rem !important;
+    }
+
+    .events-main-cta-btn i,
+    .events-main-cta-btn .events-cta-icon {
+        font-size: 1.25rem !important;
+    }
+
+    .events-main-cta-btn .events-cta-title {
         font-size: 0.88rem !important;
-        padding: 0.8rem 1rem !important;
-        line-height: 1.35 !important;
+    }
+
+    .events-main-cta-btn .events-cta-action {
+        font-size: 0.80rem !important;
+    }
+}
+
+@media (max-width: 380px) {
+    a.btn.events-main-cta-btn,
+    a.events-main-cta-btn,
+    .events-main-cta-btn {
+        padding: 0.75rem 1.15rem !important;
+        gap: 0.55rem !important;
+    }
+
+    .events-main-cta-btn i,
+    .events-main-cta-btn .events-cta-icon {
+        font-size: 1.15rem !important;
+    }
+
+    .events-main-cta-btn .events-cta-title {
+        font-size: 0.84rem !important;
+    }
+
+    .events-main-cta-btn .events-cta-action {
+        font-size: 0.76rem !important;
     }
 
     /* Reading Partners Card Action Buttons & CTA on small screens */
