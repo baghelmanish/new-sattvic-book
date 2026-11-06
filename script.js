@@ -855,7 +855,7 @@ document.addEventListener('DOMContentLoaded', () => {
         copyCouponBtns.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
-                const code = btn.getAttribute('data-code') || 'SATTVIC20';
+                const code = btn.getAttribute('data-code') || 'SATTVICBOOKS20';
                 
                 const copyText = () => {
                     const originalHTML = btn.innerHTML;
