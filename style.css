@@ -11969,3 +11969,290 @@ a.btn.events-main-cta-btn:hover,
         transform: translateX(-50%) !important;
     }
 }
+
+/* ==========================================================================
+   Books Page (books.html) Specific Styles
+   ========================================================================== */
+.books-header-bg {
+    margin-top: 86px !important;
+    background: linear-gradient(135deg, #322214 0%, #382618 50%, #20140B 100%) !important;
+    padding: 5.5rem 0 4.2rem !important;
+    color: #FFFFFF !important;
+    text-align: center !important;
+    position: relative !important;
+    border-bottom: 2px solid #D7B347 !important;
+    box-shadow: 0 4px 20px rgba(56, 36, 19, 0.2) !important;
+    overflow: hidden;
+}
+
+.books-header-bg h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 3rem;
+    color: #FFFFFF;
+    margin-top: 0.6rem;
+    margin-bottom: 1.1rem;
+    letter-spacing: -0.5px;
+}
+
+.books-header-bg p {
+    color: #F6EBDD;
+    font-size: 1.15rem;
+    line-height: 1.75;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.books-intro-card {
+    background: #FFFFFF;
+    border: 1.5px solid rgba(197, 160, 89, 0.4);
+    border-radius: 16px;
+    padding: 3.2rem 3rem;
+    box-shadow: 0 12px 35px rgba(56, 38, 24, 0.08);
+    position: relative;
+    max-width: 980px;
+    margin: -40px auto 3.5rem auto;
+    z-index: 2;
+    text-align: center;
+}
+
+.books-intro-quote {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.25rem;
+    line-height: 1.9;
+    color: var(--clr-primary);
+    font-weight: 500;
+    margin-bottom: 1.8rem;
+    position: relative;
+}
+
+.books-intro-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.books-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.2rem;
+    margin-top: 2.5rem;
+}
+
+.book-cat-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 1.5px solid rgba(197, 160, 89, 0.28);
+    box-shadow: 0 8px 24px rgba(44, 30, 20, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-decoration: none !important;
+    color: inherit;
+    position: relative;
+}
+
+.book-cat-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--clr-gold);
+    box-shadow: 0 20px 45px rgba(44, 30, 20, 0.16);
+}
+
+.book-cat-img-wrap {
+    height: 250px;
+    background: linear-gradient(180deg, #FDFBF7 0%, #FAF6EE 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.book-cat-img-wrap img {
+    max-height: 210px;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+    filter: drop-shadow(0 8px 18px rgba(0,0,0,0.14));
+}
+
+.book-cat-card:hover .book-cat-img-wrap img {
+    transform: scale(1.06);
+}
+
+.book-cat-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: #382618;
+    color: #D7B347;
+    padding: 0.35rem 0.85rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: 1px solid rgba(215, 179, 71, 0.4);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 1;
+}
+
+.book-cat-body {
+    padding: 1.8rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.book-cat-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+    margin-bottom: 0.75rem;
+    line-height: 1.35;
+    transition: color 0.3s ease;
+}
+
+.book-cat-card:hover .book-cat-title {
+    color: var(--clr-gold-dark, #855e20);
+}
+
+.book-cat-desc {
+    color: #554433;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.book-cat-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    background: #382618;
+    color: #FAF6EE !important;
+    padding: 0.75rem 1.4rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    margin-top: auto;
+}
+
+.book-cat-card:hover .book-cat-btn {
+    background: var(--clr-gold);
+    color: #2C1E14 !important;
+    border-color: var(--clr-gold);
+    box-shadow: 0 4px 14px rgba(197, 160, 89, 0.4);
+}
+
+@media (max-width: 992px) {
+    .books-categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.8rem;
+    }
+    .books-header-bg h1 {
+        font-size: 2.4rem;
+    }
+    .books-intro-card {
+        padding: 2.4rem 1.8rem;
+        margin: -30px 1rem 3rem 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .books-categories-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .books-header-bg {
+        padding: 4.2rem 0 3.2rem !important;
+    }
+    .books-header-bg h1 {
+        font-size: 2rem;
+    }
+    .books-intro-card {
+        padding: 2rem 1.4rem;
+        margin: -25px 0.5rem 2.5rem 0.5rem;
+    }
+    .books-intro-quote {
+        font-size: 1.1rem;
+        line-height: 1.75;
+    }
+    .book-cat-img-wrap {
+        height: 220px;
+    }
+}
+
+/* Books Catalog Main CTA Button Spacing & Architecture */
+.books-catalog-cta-wrap {
+    margin-top: 4.5rem !important;
+    margin-bottom: 2.5rem !important;
+    text-align: center !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.books-catalog-cta-btn {
+    background: #382618 !important;
+    color: #FAF6EE !important;
+    padding: 1.15rem 3rem !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.35px !important;
+    border-radius: 50px !important;
+    border: 1.5px solid #D7B347 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.75rem !important;
+    text-decoration: none !important;
+    box-shadow: 0 8px 24px rgba(44, 30, 20, 0.2) !important;
+    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    cursor: pointer !important;
+}
+
+.books-catalog-cta-btn i {
+    color: #D7B347 !important;
+    font-size: 1.15rem !important;
+    transition: transform 0.3s ease !important;
+}
+
+.books-catalog-cta-btn:hover {
+    background: #D7B347 !important;
+    color: #2C1E14 !important;
+    border-color: #D7B347 !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 14px 32px rgba(197, 160, 89, 0.45) !important;
+}
+
+.books-catalog-cta-btn:hover i {
+    color: #2C1E14 !important;
+    transform: translateX(4px) !important;
+}
+
+@media (max-width: 768px) {
+    .books-catalog-cta-wrap {
+        margin-top: 3.2rem !important;
+        margin-bottom: 1.8rem !important;
+        padding: 0 1rem !important;
+    }
+
+    .books-catalog-cta-btn {
+        width: 100% !important;
+        max-width: 360px !important;
+        padding: 1rem 1.6rem !important;
+        font-size: 1rem !important;
+        white-space: normal !important;
+        text-align: center !important;
+    }
+}
