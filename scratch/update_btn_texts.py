@@ -7,8 +7,8 @@ html_files = sorted(glob.glob(r'd:\Sattvic Books\*.html'))
 old_footer_btn = '<a href="#catalogModal" class="btn footer-catalog-btn open-catalog-modal"><i class="fa-solid fa-file-pdf"></i> Download Free Catalog</a>'
 new_footer_btn = '<a href="#catalogModal" class="btn footer-catalog-btn open-catalog-modal"><i class="fa-solid fa-file-pdf"></i> Download 2026 Catalog (PDF)</a>'
 
-old_cta_btn = '<a href="https://web.mytiny.us/sattvic-books/shop/" class="btn btn-primary"><i class="fa-solid fa-book-open"></i> Explore Our Catalog <i class="fa-solid fa-arrow-right"></i></a>'
-new_cta_btn = '<a href="https://web.mytiny.us/sattvic-books/shop/" class="btn btn-primary"><i class="fa-solid fa-compass"></i> Begin Your Journey <i class="fa-solid fa-arrow-right"></i></a>'
+old_cta_btn = '<a href="https://sattvicbooks.com/shop/" class="btn btn-primary"><i class="fa-solid fa-book-open"></i> Explore Our Catalog <i class="fa-solid fa-arrow-right"></i></a>'
+new_cta_btn = '<a href="https://sattvicbooks.com/shop/" class="btn btn-primary"><i class="fa-solid fa-compass"></i> Begin Your Journey <i class="fa-solid fa-arrow-right"></i></a>'
 
 for h in html_files:
     fname = h.split('\\')[-1]

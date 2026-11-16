@@ -6,13 +6,13 @@ with open(r'd:\Sattvic Books\index.html', 'r', encoding='utf-8') as f:
 
 # Replace View All Books in Featured Catalog with clean pill button
 old_view_catalog = '''            <div class="text-center mt-4">
-                <a href="https://web.mytiny.us/sattvic-books/shop/" class="btn btn-primary" style="padding: 0.9rem 2.2rem; font-size: 1rem;">
+                <a href="https://sattvicbooks.com/shop/" class="btn btn-primary" style="padding: 0.9rem 2.2rem; font-size: 1rem;">
                     <i class="fa-solid fa-book-open" style="margin-right: 0.45rem;"></i> View All Books <i class="fa-solid fa-arrow-right" style="margin-left: 0.35rem;"></i>
                 </a>
             </div>'''
 
 new_view_catalog = '''            <div class="text-center mt-4">
-                <a href="https://web.mytiny.us/sattvic-books/shop/" class="view-catalog-pill-btn" title="View Books">
+                <a href="https://sattvicbooks.com/shop/" class="view-catalog-pill-btn" title="View Books">
                     View Books <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>'''
@@ -126,7 +126,7 @@ new_books_section_content = '''<div class="sattvic-book-grid fade-in">
             </div>
             
             <div class="text-center mt-4">
-                <a href="https://web.mytiny.us/sattvic-books/shop/" class="browse-catalog-pill-btn" title="Browse All Books &amp; Categories">
+                <a href="https://sattvicbooks.com/shop/" class="browse-catalog-pill-btn" title="Browse All Books &amp; Categories">
                     <i class="fa-solid fa-book-bookmark"></i> Browse All Books &amp; Categories
                 </a>
             </div>
