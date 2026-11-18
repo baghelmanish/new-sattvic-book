@@ -420,14 +420,14 @@ document.addEventListener('DOMContentLoaded', () => {
             `
         },
         'breakfast-recipes-release': {
-            badge: 'Ayurvedic Cookbooks',
+            badge: 'Sattvic Cookbooks',
             badgeClass: 'badge-published',
             title: "'Sattvic Breakfast Recipes': 30 Morning Meals for Energy & Clarity",
             date: 'March 2026',
             location: 'Culinary Wisdom Series',
             image: 'assets/sattvic-breakfast-recipes.png',
             body: `
-                <p><strong>RELEASE ANNOUNCEMENT — March 2026</strong> — There is a precious moment before the rush of the modern day begins when the mind is receptive and clean. <em>Sattvic Breakfast Recipes</em> offers 30 whole-food, plant-powered morning recipes crafted according to Ayurvedic food synergy.</p>
+                <p><strong>RELEASE ANNOUNCEMENT — March 2026</strong> — There is a precious moment before the rush of the modern day begins when the mind is receptive and clean. <em>Sattvic Breakfast Recipes</em> offers 30 whole-food, plant-powered morning recipes crafted according to mindful food synergy.</p>
                 <p>Free from refined sugars, onion, garlic, and processed ingredients, these recipes balance Agni (digestive fire), stabilize prana, and sustain mental focus throughout the day.</p>
             `
         },
